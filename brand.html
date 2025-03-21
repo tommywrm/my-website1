@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品牌理念 - 敦煌藻井首饰</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+    <!-- 头部导航 -->
+    <header class="bg-gradient-to-r from-yellow-600 to-red-500 text-white py-4 shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-bold">敦煌藻井首饰</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:underline">首页</a></li>
+                    <li><a href="brand.html" class="hover:underline">品牌理念</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- 品牌理念全屏展示 -->
+   <section id="brand-slider">
+
+        <div class="slide" id="slide1">
+            <div class="slide-bg" style="background-image: url('images/brand1.jpg');"></div>
+            <div class="content">
+                <h2>品牌理念</h2>
+                <p>敦煌文化与现代科技的完美融合，打造独一无二的国潮艺术首饰。</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide2">
+            <div class="slide-bg" style="background-image: url('images/brand2.jpg');"></div>
+            <div class="content">
+                <h2>核心价值主张</h2>
+                <p>我们结合漂漆工艺、敦煌藻井文化和NFT技术，赋予首饰情感价值。</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide3">
+            <div class="slide-bg" style="background-image: url('images/brand3.jpg');"></div>
+            <div class="content">
+                <h2>差异化定位</h2>
+                <p>每款首饰都是独一无二的数字艺术品，体现个性与文化融合。</p>
+            </div>
+        </div>
+
+        <div class="slide" id="slide4">
+            <div class="slide-bg" style="background-image: url('images/brand4.jpg');"></div>
+            <div class="content">
+                <h2>目标人群</h2>
+                <p>我们的产品专为35岁以下的年轻群体设计，他们热爱国潮、关注个性表达，并且愿意为文化价值与情感认同买单。</p>
+            </div>
+        </div>
+
+        <!-- 小圆点导航 -->
+        <div class="dots-container">
+            <span class="dot active" onclick="scrollToSlide(0)"></span>
+            <span class="dot" onclick="scrollToSlide(1)"></span>
+            <span class="dot" onclick="scrollToSlide(2)"></span>
+            <span class="dot" onclick="scrollToSlide(3)"></span>
+        </div>
+
+    </section>
+
+    <!-- 返回首页 -->
+    <div class="text-center my-10">
+        <a href="main.html" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-700">
+            返回首页
+        </a>
+    </div>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>© 2024 敦煌藻井首饰设计 | 联系邮箱：tommywrm@gmail.com</p>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+</html>

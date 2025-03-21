@@ -1,0 +1,303 @@
+/* 🌟 全局样式 */
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: 0;
+}
+
+/* 标题样式 */
+h1 {
+    font-family: "Noto Serif SC", serif;
+    margin-bottom: 40px;
+}
+
+/* 🌟 标题（h2）样式 */
+h2 {
+    font-family: "Noto Serif SC", serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🌟 品牌理念 - 全屏滚动部分 */
+#brand-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🌟 幻灯片样式 */
+.slide {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* 🌟 让第一个幻灯片默认显示 */
+.slide.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* 🌟 品牌理念 - 背景图片 */
+#slide1 .slide-bg {
+    background-image: url("images/brand1.jpg");
+}
+
+#slide2 .slide-bg {
+    background-image: url("images/brand2.jpg");
+}
+
+#slide3 .slide-bg {
+    background-image: url("images/brand3.jpg");
+}
+
+#slide4 .slide-bg {
+    background-image: url("images/brand4.jpg");
+}
+
+/* 🌟 确保背景图片填充整个屏幕 */
+.slide-bg {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+/* 🌟 文字内容 */
+.content {
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* 🌟 小圆点导航 */
+.dots-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* 🌟 按钮样式 */
+button {
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 1s ease-in-out; /* ✅ 淡入淡出效果 */
+}
+
+.carousel-item.active {
+    opacity: 1; /* 只有当前的图片显示 */
+    z-index: 10;
+}
+
+/* 🌟 轮播按钮 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10; /* ✅ 确保按钮不会被遮挡 */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* 🌟 产品展示（图片悬停放大效果） */
+.product img {
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* ✅ 平滑动画 */
+    width: calc(100% * 6);
+}
+
+.carousel-item {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 100%;
+}
+
+
+
+/* 🌟 团队介绍部分样式 */
+#team {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* 🌟 团队成员容器 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🌟 单个团队成员 */
+.team-member {
+    width: 200px;
+    margin: 10px;
+}
+
+/* 🌟 圆形头像 */
+.team-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 团队成员名字 */
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 🌟 角色描述 */
+.team-member p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* 🌟 全局样式 */
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🌟 标题样式 */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🌟 图片网格布局 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 三列布局 */
+    gap: 20px; /* ✅ 设置图片间距 */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🌟 图片样式 */
+.product-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* ✅ 让图片边角稍微圆润 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* 🌟 图片网格布局（3列2行） */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 列布局 */
+    grid-template-rows: repeat(2, auto); /* ✅ 2 行 */
+    gap: 20px; /* 设置图片间距 */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🌟 图片样式 */
+.product-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* ✅ 让图片边角稍微圆润 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+
+
